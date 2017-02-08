@@ -35,15 +35,15 @@ public class Fragment2 extends Fragment {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle args = new Bundle();
-               // String name = getArguments().getString("Name");
+                Bundle txtSemData = new Bundle();
+                String name = getArguments().getString("Name");
                 String data_sem = semester.getText().toString();
                 f3 = new Fragment3();
                 FragmentManager fm =getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-              //  args.putString("Name", name);
-                args.putString("Semester_data",data_sem);
-                f3.setArguments(args);
+                txtSemData.putString("Name", name);
+                txtSemData.putString("Semester_data",data_sem);
+                f3.setArguments(txtSemData);
                 ft.replace(R.id.main_id,f3);
                 ft.addToBackStack(null);
                 fm.popBackStack();
@@ -63,7 +63,7 @@ public class Fragment2 extends Fragment {
                 FragmentTransaction ft = fm.beginTransaction();
 
                 ft.replace(R.id.main_id,f2);
-                ft.addToBackStack(null);
+                ft.addToBackStack("Fragment1");
                 fm.popBackStack();
                 ft.commit();
 

@@ -33,20 +33,19 @@ private EditText name;
             @Override
             public void onClick(View view) {
                 String data = name.getText().toString();
-                Bundle txtData = new Bundle();
-                txtData.putString("Name",data);
+                Bundle txtNameData = new Bundle();
+                txtNameData.putString("Name",data);
                 f2 = new Fragment2();
-                f1 = new Fragment3();
 
                 FragmentManager fm =getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-
-                f1.setArguments(txtData);
-                ft.replace(R.id.main_id,f1);
+                f2.setArguments(txtNameData);
                 ft.replace(R.id.main_id,f2);
                 fm.popBackStack();
                 name.clearFocus();
                 ft.commit();
+
+
 
 
             }

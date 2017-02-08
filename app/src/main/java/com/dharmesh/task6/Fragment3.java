@@ -20,7 +20,8 @@ public class Fragment3 extends Fragment {
     private Button b1;
     private Fragment f1,f2,f3;
     private View view;
-
+    private TextView name,semester;
+    String name_data,sem_data;
 
 
     @Nullable
@@ -28,10 +29,12 @@ public class Fragment3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        // return super.onCreateView(inflater, container, savedInstanceState);
         View v = inflater.inflate(R.layout.fragment3, container,false);
-        TextView name = (TextView)v.findViewById(R.id.name_txt);
-        TextView  semester = (TextView)v.findViewById(R.id.semester_txt) ;
-         String name_data = getArguments().getString("Name");
-        String sem_data = getArguments().getString("Semester_data");
+        Bundle txtSemData = new Bundle();
+       String name1 = getArguments().getString("Name");
+        name = (TextView)v.findViewById(R.id.name_txt);
+        semester = (TextView)v.findViewById(R.id.semester_txt) ;
+        name_data = getArguments().getString("Name");
+        sem_data = getArguments().getString("Semester_data");
         name.setText(name_data);
         semester.setText(sem_data);
         b1 = (Button)v.findViewById(R.id.btn_goback);
