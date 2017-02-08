@@ -36,12 +36,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 Bundle args = new Bundle();
-                String name = getArguments().getString("Name");
+               // String name = getArguments().getString("Name");
                 String data_sem = semester.getText().toString();
                 f3 = new Fragment3();
                 FragmentManager fm =getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                args.putString("Name", name);
+              //  args.putString("Name", name);
                 args.putString("Semester_data",data_sem);
                 f3.setArguments(args);
                 ft.replace(R.id.main_id,f3);

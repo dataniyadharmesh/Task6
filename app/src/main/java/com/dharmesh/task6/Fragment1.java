@@ -36,11 +36,13 @@ private EditText name;
                 Bundle txtData = new Bundle();
                 txtData.putString("Name",data);
                 f2 = new Fragment2();
+                f1 = new Fragment3();
 
                 FragmentManager fm =getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
 
-                f2.setArguments(txtData);
+                f1.setArguments(txtData);
+                ft.replace(R.id.main_id,f1);
                 ft.replace(R.id.main_id,f2);
                 fm.popBackStack();
                 name.clearFocus();
