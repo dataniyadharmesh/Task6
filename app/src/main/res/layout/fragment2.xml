@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B23"
+    android:gravity="bottom">
+    <TextView
+        android:text="This is Fragment 2"
+        android:gravity="top"
+        android:textSize="20sp"
+        android:paddingLeft="90dp"
+        android:paddingRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/textView"
+        android:layout_weight="0.19" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.74">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+            android:id="@+id/sem"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+
+
+    <Button
+        android:layout_width="122dp"
+        android:layout_height="match_parent"
+        android:id="@+id/btn_goto_a"
+        android:padding="25dp"
+        android:layout_marginRight="10dp"
+
+        android:layout_gravity="center_horizontal"
+        android:text="GO TO A"
+        android:textColor="#000000"
+        android:background="#23CD56"
+        android:textStyle="bold" />
+
+    <Button
+
+    android:layout_width="122dp"
+    android:layout_height="80dp"
+    android:id="@+id/btn_goto_c"
+
+        android:layout_marginLeft="10dp"
+        android:text="GO TO C"
+
+        android:padding="25dp"
+    android:textColor="#000000"
+    android:background="#23CD56"
+    android:textStyle="bold"
+    android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
